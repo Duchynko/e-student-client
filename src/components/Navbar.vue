@@ -8,10 +8,10 @@
         <v-btn active-class="active-nav-btn" to="/" icon class="mx-6">
           <v-icon large>mdi-home-outline</v-icon>
         </v-btn>
-        <v-btn active-class="active-nav-btn" to="About" icon class="mx-6">
+        <v-btn active-class="active-nav-btn" :to="{ name: 'About' }" icon class="mx-6">
           <v-icon large>mdi-calendar-month-outline</v-icon>
         </v-btn>
-        <v-btn active-class="active-nav-btn" icon class="mx-6">
+        <v-btn active-class="active-nav-btn" :to="{ name: 'Courses' }" icon class="mx-6">
           <v-icon large>mdi-school-outline</v-icon>
         </v-btn>
         <v-btn icon class="mx-6">
@@ -29,8 +29,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-export default Vue.extend({});
+import Vue from 'vue'
+export default Vue.extend({})
 </script>
 
 <style scoped>
