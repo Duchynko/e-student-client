@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Christmas dinner",
+    "subtitle": "20.12.2020",
+    "recurring": false
+  },
+  {
+    "title": "Bachelor party",
+    "subtitle": "01.02.2021",
+    "recurring": false
+  },
+  {
+    "title": "Cleaning the beach",
+    "subtitle": "05.02.2021",
+    "recurring": true
+  }
+]

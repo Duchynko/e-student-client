@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Logarithms",
+    "subtitle": "due 11.11.2020",
+    "status": "active",
+    "type": "HW"
+  },
+  {
+    "title": "Hamlet",
+    "subtitle": "handed 14.11.2020",
+    "status": "done",
+    "type": "EX"
+  },
+  {
+    "title": "Chapter 3",
+    "subtitle": "handed 15.11.2020",
+    "status": "done",
+    "type": "HW"
+  },
+  {
+    "title": "Mammals",
+    "subtitle": "due 15.11.2020",
+    "status": "expired",
+    "type": "PR"
+  }
+]
