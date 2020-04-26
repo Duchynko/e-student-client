@@ -1,5 +1,5 @@
 <template>
-  <v-container class="fill-height grey lighten-4 align-start" fluid>
+  <v-container class="fill-height align-start" fluid>
     <v-row justify="center">
       <v-col cols="6" class="text-left">
         <v-icon color="info" class="float-left mr-1">mdi-newspaper</v-icon>

@@ -2,7 +2,7 @@
   <v-app id="inspire">
     <Navbar />
 
-    <v-content>
+    <v-content class="content-wrapper">
       <router-view />
     </v-content>
 
@@ -28,3 +28,9 @@ export default Vue.extend({
   }),
 })
 </script>
+
+<style scoped>
+.content-wrapper {
+  background: var(--v-background-lighten3) !important;
+}
+</style>
