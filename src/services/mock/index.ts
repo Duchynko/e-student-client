@@ -22,3 +22,5 @@ export const fetchEvents = () => {
 export const fetchTasks = () => {
   return fetch(tasks, 1000)
 }
+
+export * from './index'
