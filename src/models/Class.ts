@@ -1,9 +1,13 @@
-import Group from './Group'
+import School from './School'
+import Student from './Student'
+import Teacher from './Teacher'
 
 export default interface Class {
   _id: string
+  school: School['_id']
   name: string
   schoolYear: string
   code: string
-  group: Group['_id']
+  students: Student[]
+  teachers: Teacher[]
 }

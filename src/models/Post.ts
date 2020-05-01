@@ -1,4 +1,3 @@
-import Group from './Group'
 import User from './User'
 
 export default interface Post {
@@ -6,6 +5,5 @@ export default interface Post {
   title: string
   content: string
   date: Date
-  author: User['_id']
-  groups: Group['_id'][]
+  author: User
 }

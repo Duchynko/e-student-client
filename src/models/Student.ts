@@ -4,7 +4,7 @@ import Class from './Class'
 export default interface Student extends User {
   grades: [
     {
-      class: Class['_id']
+      class: Class
       grades: number[]
     },
   ]
