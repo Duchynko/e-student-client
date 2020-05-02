@@ -1,4 +1,5 @@
 import School from './School'
+import Class from './Class'
 
 export default interface User {
   _id: string
@@ -9,5 +10,6 @@ export default interface User {
   password: string
   avatar: string
   birthday: Date
+  classes: Class[]
   school: School['_id']
 }

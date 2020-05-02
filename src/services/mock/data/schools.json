@@ -1,0 +1,47 @@
+{
+  "_id": "school1",
+  "name": "Univeristy X",
+  "address": "Podstamer Platz 10, Berlin 12345, Germany",
+  "contact": {
+    "email": "universityx@edu.com",
+    "phone": "+4912345678"
+  },
+  "posts": [
+    {
+      "_id": "post1",
+      "content": "It’s OK to have your eggs in one basket as long as you control what happens to that basket",
+      "date": "yesterday",
+      "author": {
+        "_id": "teacher1",
+        "firstName": "Elon",
+        "lastName": "Musk",
+        "title": "Physics teacher",
+        "avatar": "https://api.adorable.io/avatars/285/elon@musk.com.png"
+      }
+    },
+    {
+      "_id": "post2",
+      "content": "If all my bridge coach ever told me was that I was ‘satisfactory,’ I would have no hope of ever getting better. How would I know who was the best? How would I know what I was doing differently?",
+      "date": "2 days ago",
+      "author": {
+        "_id": "teacher2",
+        "firstName": "Bill",
+        "lastName": "Gates",
+        "title": "Informatics teacher",
+        "avatar": "https://api.adorable.io/avatars/285/bill@gates.com.png"
+      }
+    },
+    {
+      "_id": "post3",
+      "content": "Design is not just what it looks like and feels like. Design is how it works.",
+      "date": "a week ago",
+      "author": {
+        "_id": "teacher3",
+        "firstName": "Steve",
+        "lastName": "Jobs",
+        "title": "Arts teacher",
+        "avatar": "https://api.adorable.io/avatars/285/steve@jobs.com.png"
+      }
+    }
+  ]
+}
