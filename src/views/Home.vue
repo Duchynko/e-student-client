@@ -4,8 +4,8 @@
       <v-col cols="6" class="text-left">
         <v-icon color="info" class="float-left mr-1">mdi-newspaper</v-icon>
         <p class="font-weight-light">UPDATES</p>
-        <v-skeleton-loader v-if="feedLoading" transition="undefined" height="94" type="list-item-avatar-three-line" />
-        <FeedCard v-for="(post, i) in feed" :key="i" :feed="post" />
+        <v-skeleton-loader v-if="postsLoading" transition="undefined" height="94" type="list-item-avatar-three-line" />
+        <FeedCard v-for="(post, i) in posts" :key="i" :post="post" />
       </v-col>
 
       <v-col cols="3" class="text-left">
@@ -17,6 +17,9 @@
               <v-list>
                 <v-list-item-group color="primary">
                   <v-skeleton-loader v-if="tasksLoading" transition="undefined" height="94" type="list-item-two-line" />
+                  <p class="text-center font-weight-light black--text" v-if="!this.loading && this.tasks.length === 0">
+                    No tasks found
+                  </p>
                   <SidebarTaskItem v-for="(task, i) in tasks" :key="i" :item="task" />
                 </v-list-item-group>
               </v-list>
@@ -37,6 +40,9 @@
                     height="94"
                     type="list-item-two-line"
                   />
+                  <p class="text-center font-weight-light black--text" v-if="!this.loading && this.events.length === 0">
+                    No events found
+                  </p>
                   <SidebarCalendarItem v-for="(item, i) in events" :key="i" :item="item" />
                 </v-list-item-group>
               </v-list>
@@ -53,6 +59,7 @@ import Vue from 'vue'
 import FeedCard from '@/components/FeedCard.vue'
 import SidebarCalendarItem from '@/components/SidebarCalendarItem.vue'
 import SidebarTaskItem from '@/components/SidebarTaskItem.vue'
+import { getSchoolPosts, getEvents, getTasks } from '../services/mock'
 export default Vue.extend({
   name: 'Home',
   components: {
@@ -61,28 +68,32 @@ export default Vue.extend({
     SidebarTaskItem,
   },
   data: () => ({
-    feedLoading: false,
+    postsLoading: false,
     eventsLoading: false,
     tasksLoading: false,
+    posts: {},
+    events: {},
+    tasks: {},
   }),
-  computed: {
-    feed() {
-      return this.$store.state.feed
-    },
-    events() {
-      return this.$store.state.events
-    },
-    tasks() {
-      return this.$store.state.tasks
-    },
-  },
   created() {
-    this.feedLoading = true
+    this.$store.dispatch('fetchCurrentUser')
+
+    this.postsLoading = true
     this.eventsLoading = true
     this.tasksLoading = true
-    this.$store.dispatch('fetchFeed').then(() => (this.feedLoading = false))
-    this.$store.dispatch('fetchEvents').then(() => (this.eventsLoading = false))
-    this.$store.dispatch('fetchTasks').then(() => (this.tasksLoading = false))
+
+    getSchoolPosts().then(res => {
+      this.posts = res
+      this.postsLoading = false
+    })
+    getEvents().then(res => {
+      this.events = res
+      this.eventsLoading = false
+    })
+    getTasks().then(res => {
+      this.tasks = res
+      this.tasksLoading = false
+    })
   },
 })
 </script>

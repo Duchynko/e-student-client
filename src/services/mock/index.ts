@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import feed from './data/feed.json'
 import events from './data/events.json'
 import tasks from './data/tasks.json'
+import currentUser from './data/currentUser.json'
+import school from './data/schools.json'
 
-const fetch = (data: any, time = 0) => {
+const fetch = (data: any, time = 0): Promise<any> => {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve(data)
@@ -11,16 +12,20 @@ const fetch = (data: any, time = 0) => {
   })
 }
 
-export const fetchFeed = () => {
-  return fetch(feed, 1000)
+export const fetchCurrentUser = () => {
+  return fetch(currentUser, 300)
 }
 
-export const fetchEvents = () => {
-  return fetch(events, 1000)
+export const getSchoolPosts = () => {
+  return fetch(school.posts, 300)
 }
 
-export const fetchTasks = () => {
-  return fetch(tasks, 1000)
+export const getEvents = () => {
+  return fetch(events, 300)
+}
+
+export const getTasks = () => {
+  return fetch(tasks, 300)
 }
 
 export * from './index'

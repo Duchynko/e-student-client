@@ -1,36 +1,25 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const client = require('api-client')
+import * as client from '../services/mock/index'
+import Teacher from '@/models/Teacher'
+import Student from '@/models/Student'
+import School from '@/models/School'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    feed: [],
-    events: [],
-    tasks: [],
+    currentUser: {} as Teacher | Student,
   },
   mutations: {
-    setFeed(state, feed) {
-      state.feed = feed
-    },
-    setEvents(state, events) {
-      state.events = events
-    },
-    setTasks(state, tasks) {
-      state.tasks = tasks
+    setCurrentUser(state, user) {
+      state.currentUser = user
     },
   },
   actions: {
-    fetchFeed({ commit }) {
-      return client.fetchFeed().then((feed: any) => commit('setFeed', feed))
-    },
-    fetchEvents({ commit }) {
-      return client.fetchEvents().then((events: any) => commit('setEvents', events))
-    },
-    fetchTasks({ commit }) {
-      return client.fetchTasks().then((tasks: any) => commit('setTasks', tasks))
+    async fetchCurrentUser({ commit }) {
+      const currentUser = await client.fetchCurrentUser()
+      return commit('setCurrentUser', currentUser)
     },
   },
   modules: {},
