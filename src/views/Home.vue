@@ -4,7 +4,15 @@
       <v-col cols="6" class="text-left">
         <v-icon color="info" class="float-left mr-1">mdi-newspaper</v-icon>
         <p class="font-weight-light">UPDATES</p>
-        <v-skeleton-loader v-if="postsLoading" transition="undefined" height="94" type="list-item-avatar-three-line" />
+        <div v-if="postsLoading">
+          <v-skeleton-loader
+            v-for="index in 3"
+            :key="index"
+            transition="undefined"
+            height="94"
+            type="list-item-avatar-three-line"
+          />
+        </div>
         <FeedCard v-for="(post, i) in posts" :key="i" :post="post" />
       </v-col>
 
@@ -16,7 +24,15 @@
             <v-card class="mx-auto" max-width="400" tile>
               <v-list>
                 <v-list-item-group color="primary">
-                  <v-skeleton-loader v-if="tasksLoading" transition="undefined" height="94" type="list-item-two-line" />
+                  <div v-if="tasksLoading">
+                    <v-skeleton-loader
+                      v-for="index in 2"
+                      :key="index"
+                      transition="undefined"
+                      height="94"
+                      type="list-item-two-line"
+                    />
+                  </div>
                   <p class="text-center font-weight-light black--text" v-if="!this.loading && this.tasks.length === 0">
                     No tasks found
                   </p>
@@ -34,12 +50,15 @@
             <v-card class="mx-auto" max-width="400" tile>
               <v-list>
                 <v-list-item-group color="primary">
-                  <v-skeleton-loader
-                    v-if="eventsLoading"
-                    transition="undefined"
-                    height="94"
-                    type="list-item-two-line"
-                  />
+                  <div v-if="eventsLoading">
+                    <v-skeleton-loader
+                      v-for="index in 2"
+                      :key="index"
+                      transition="undefined"
+                      height="94"
+                      type="list-item-two-line"
+                    />
+                  </div>
                   <p class="text-center font-weight-light black--text" v-if="!this.loading && this.events.length === 0">
                     No events found
                   </p>
