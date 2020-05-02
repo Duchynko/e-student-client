@@ -4,8 +4,8 @@
       <p class="my-auto body-2 grey--text" v-html="item.type"></p>
     </v-list-item-avatar>
     <v-list-item-content>
-      <v-list-item-title v-html="item.title" />
-      <v-list-item-subtitle class="font-weight-light caption" v-html="item.subtitle" />
+      <v-list-item-title v-html="item.name" />
+      <v-list-item-subtitle class="font-weight-light caption" v-html="item.deadline" />
     </v-list-item-content>
     <v-btn icon>
       <v-icon v-if="item.status === 'active'" color="primary">mdi-chevron-right</v-icon>

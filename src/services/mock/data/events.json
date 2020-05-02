@@ -1,17 +1,18 @@
 [
   {
-    "title": "Christmas dinner",
-    "subtitle": "20.12.2020",
+    "_id": "event1",
+    "name": "Exam logarithms",
+    "date": "11.12.2020",
+    "content": "A quick exam to test your logarithms skills",
+    "author": "teacher1",
     "recurring": false
   },
   {
-    "title": "Bachelor party",
-    "subtitle": "01.02.2021",
-    "recurring": false
-  },
-  {
-    "title": "Cleaning the beach",
-    "subtitle": "05.02.2021",
+    "_id": "event2",
+    "name": "Midterm evaluation",
+    "date": "13.12.2020",
+    "content": "Please write your feedback for the midterm evaluation",
+    "author": "teacher1",
     "recurring": true
   }
 ]

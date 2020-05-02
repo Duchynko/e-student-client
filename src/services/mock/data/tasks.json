@@ -1,26 +1,26 @@
 [
   {
-    "title": "Logarithms",
-    "subtitle": "due 11.11.2020",
-    "status": "active",
-    "type": "HW"
-  },
-  {
-    "title": "Hamlet",
-    "subtitle": "handed 14.11.2020",
-    "status": "done",
-    "type": "EX"
-  },
-  {
-    "title": "Chapter 3",
-    "subtitle": "handed 15.11.2020",
-    "status": "done",
-    "type": "HW"
-  },
-  {
-    "title": "Mammals",
-    "subtitle": "due 15.11.2020",
+    "_id": "task1",
+    "name": "Logarithms exercises",
+    "deadline": "due 11.11.2020",
+    "type": "HW",
     "status": "expired",
-    "type": "PR"
+    "author": "teacher1"
+  },
+  {
+    "_id": "task2",
+    "name": "Homework presentation",
+    "deadline": "handed 14.11.2020",
+    "type": "PR",
+    "status": "done",
+    "author": "teacher2"
+  },
+  {
+    "_id": "task3",
+    "name": "Logarithms-2 exercise",
+    "deadline": "due 15.11.2020",
+    "status": "active",
+    "type": "HW",
+    "author": "teacher2"
   }
 ]
