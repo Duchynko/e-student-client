@@ -19,9 +19,13 @@
         </v-btn>
       </v-col>
       <v-col cols="2" class="d-flex justify-end">
-        <v-list-item-title class="text-right">Jakub</v-list-item-title>
+        <v-list-item-title
+          class="text-right subtitle-1"
+          v-if="this.currentUser.firstName"
+          v-text="`${this.currentUser.firstName} ${this.currentUser.lastName}`"
+        />
         <v-list-item-avatar>
-          <img src="https://randomuser.me/api/portraits/lego/8.jpg" alt="" />
+          <img :src="this.currentUser.avatar" alt="" />
         </v-list-item-avatar>
       </v-col>
     </v-row>
@@ -30,7 +34,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
-export default Vue.extend({})
+export default Vue.extend({
+  computed: {
+    currentUser() {
+      return this.$store.state.currentUser
+    },
+  },
+})
 </script>
 
 <style scoped>

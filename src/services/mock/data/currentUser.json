@@ -1,0 +1,96 @@
+{
+  "_id": "student1",
+  "firstName": "John",
+  "lastName": "Doe",
+  "username": "johndoe1",
+  "email": "john.doe@gmail.com",
+  "password": "password",
+  "avatar": "https://api.adorable.io/avatars/285/john.doe@gmail.com.png",
+  "birthday": "19.01.2000",
+  "school": "school1",
+  "classes": [
+    {
+      "_id": "class1",
+      "school": "school1",
+      "name": "Mathematics",
+      "schoolYear": "2019-2020",
+      "code": "MAT-19",
+      "events": [
+        {
+          "_id": "event1",
+          "name": "Exam logarithms",
+          "date": "11.12.2020",
+          "content": "A quick exam to test your logarithms skills",
+          "author": "teacher1",
+          "occuring": false
+        },
+        {
+          "_id": "event2",
+          "name": "Midterm evaluation",
+          "date": "13.12.2020",
+          "content": "Please write your feedback for the midterm evaluation",
+          "author": "teacher1",
+          "occuring": true
+        }
+      ],
+      "tasks": [
+        {
+          "_id": "task1",
+          "name": "Logarithms exercises",
+          "deadline": "due 11.11.2020",
+          "type": "HW",
+          "author": "teacher1"
+        },
+        {
+          "_id": "task2",
+          "name": "Homework presentation",
+          "deadline": "handed 14.11.2020",
+          "type": "PR",
+          "author": "teacher2"
+        },
+        {
+          "_id": "task3",
+          "title": "Logarithms-2 exercise",
+          "subtitle": "due 15.11.2020",
+          "status": "expired",
+          "type": "HW"
+        }
+      ],
+      "students": [
+        {
+          "_id": "student1",
+          "firstName": "John",
+          "lastName": "Doe",
+          "username": "johndoe1",
+          "email": "john.doe@gmail.com",
+          "password": "password",
+          "avatar": "https://api.adorable.io/avatars/285/john.doe@gmail.com.png",
+          "birthday": "19.01.2000",
+          "school": "school1",
+          "classes": []
+        },
+        {
+          "_id": "student2",
+          "firstName": "Bob",
+          "lastName": "Go",
+          "username": "bobgo1",
+          "email": "bob.go@gmail.com",
+          "password": "password",
+          "avatar": "https://api.adorable.io/avatars/285/bob.go@gmail.com.png",
+          "birthday": "10.01.2000",
+          "school": "school1",
+          "classes": []
+        }
+      ],
+      "teachers": [
+        {
+          "_id": "teacher1",
+          "firstName": "Elon",
+          "lastName": "Musk",
+          "title": "Physics teacher",
+          "avatar": "https://api.adorable.io/avatars/285/elon@musk.com.png"
+        }
+      ]
+    }
+  ]
+}
