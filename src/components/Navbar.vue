@@ -24,8 +24,9 @@
           v-if="this.currentUser.firstName"
           v-text="`${this.currentUser.firstName} ${this.currentUser.lastName}`"
         />
-        <v-list-item-avatar>
-          <img :src="this.currentUser.avatar" alt="" />
+        <v-list-item-avatar color="secondary">
+          <img v-if="this.currentUser.avatar" :src="this.currentUser.avatar" alt="" />
+          <span v-else class="white--text" v-text="this.userInitials()"></span>
         </v-list-item-avatar>
       </v-col>
     </v-row>
@@ -38,6 +39,13 @@ export default Vue.extend({
   computed: {
     currentUser() {
       return this.$store.state.currentUser
+    },
+  },
+  methods: {
+    userInitials() {
+      if (this.currentUser && this.currentUser.firstName && this.currentUser.lastName)
+        return `${this.currentUser.firstName.charAt(0)}${this.currentUser.lastName.charAt(0)}`
+      else return ''
     },
   },
 })
