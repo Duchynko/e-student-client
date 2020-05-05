@@ -33,7 +33,10 @@
                       type="list-item-two-line"
                     />
                   </div>
-                  <p class="text-center font-weight-light black--text" v-if="!this.loading && this.tasks.length === 0">
+                  <p
+                    class="text-center font-weight-light black--text"
+                    v-if="!this.tasksLoading && this.tasks.length === 0"
+                  >
                     No tasks found
                   </p>
                   <SidebarTaskItem v-for="(task, i) in tasks" :key="i" :item="task" />
@@ -59,7 +62,10 @@
                       type="list-item-two-line"
                     />
                   </div>
-                  <p class="text-center font-weight-light black--text" v-if="!this.loading && this.events.length === 0">
+                  <p
+                    class="text-center font-weight-light black--text"
+                    v-if="!this.eventsLoading && this.events.length === 0"
+                  >
                     No events found
                   </p>
                   <SidebarCalendarItem v-for="(item, i) in events" :key="i" :item="item" />
