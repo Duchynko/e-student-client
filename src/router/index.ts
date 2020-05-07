@@ -23,6 +23,25 @@ const routes: Array<RouteConfig> = [
     name: 'Courses',
     component: () => import('@/views/Courses.vue'),
   },
+  {
+    path: '/courses/:course',
+    props: true,
+    component: () => import('@/views/Course.vue'),
+    children: [
+      {
+        path: '/overview',
+        name: 'Course.Overview',
+        props: true,
+        component: () => import('@/views/Home.vue'),
+      },
+      {
+        path: '/resources',
+        name: 'Course.Resources',
+        props: true,
+        component: () => import('@/views/About.vue'),
+      },
+    ],
+  },
 ]
 
 const router = new VueRouter({
