@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="white" light>
+  <v-app-bar elevation="1" app color="white" light>
     <v-row>
       <v-col cols="2" class="d-flex align-center">
         <v-toolbar-title>E-Student</v-toolbar-title>
